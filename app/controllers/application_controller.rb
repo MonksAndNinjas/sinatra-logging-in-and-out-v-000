@@ -24,11 +24,11 @@ class ApplicationController < Sinatra::Base
   get '/account' do
     @current_user = User.find(session[:user_id])
 
-    if @current_user 
+    if @current_user
       erb :account
     end
 
-    erb :error
+    rediret '/error'
   end
 
   get '/logout' do
