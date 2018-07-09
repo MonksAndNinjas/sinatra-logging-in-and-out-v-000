@@ -9,7 +9,12 @@
 
     <a href="/logout">Log Out</a>
 
+    <% if Helpers.is_logged_in? %>
+
     "Welcome <%= @user.username %>"
+
+    <% else %>
+    <% redirect 'error' %>
 
   </body>
 </html>
