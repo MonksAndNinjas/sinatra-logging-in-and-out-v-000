@@ -26,14 +26,14 @@ class ApplicationController < Sinatra::Base
 
     if @current_user
       erb :account
-    else
+    end
       erb :error
     end
   end
 
   get '/logout' do
     session.clear
-    
+
     redirect '/'
   end
 
