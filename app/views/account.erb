@@ -7,8 +7,6 @@
   </head>
   <body id="page-top">
 
-    <a href="/logout">Log Out</a>
-
     <% if Helpers.is_logged_in? %>
 
     "Welcome <%= @user.username %>"
@@ -16,6 +14,6 @@
     <% else %>
     <% redirect 'error' %>
     <% end %>
-
+      <a href="/logout">Log Out</a>
   </body>
 </html>
