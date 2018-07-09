@@ -6,7 +6,11 @@ class Helpers
   end
 
   def self.is_logged_in?(arg)
-    true if !!arg[:user_id]
+    if arg[:user_id] != nil
+      true
+    else
+      false
+    end
   end
   
 end
