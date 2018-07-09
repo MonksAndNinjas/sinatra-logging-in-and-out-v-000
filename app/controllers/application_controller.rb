@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if Helpers.is_logged_in?(session) == false
+    if session[:user_id] == nil
       redirect '/error'
     end
 
