@@ -9,7 +9,7 @@
 
     <% if Helpers.is_logged_in?(session) %>
 
-    "Welcome <%= @user.username %>"
+    <h1>Welcome <%= @user.username %><h1>
 
     <% else %>
     <% redirect 'error' %>
