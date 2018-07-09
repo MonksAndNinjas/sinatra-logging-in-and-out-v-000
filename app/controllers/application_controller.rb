@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
       erb :account
     end
 
-    rediret '/error'
+    redirect '/error'
   end
 
   get '/logout' do
