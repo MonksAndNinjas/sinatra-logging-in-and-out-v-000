@@ -11,9 +11,8 @@
 
     <h1>Welcome <%= Helpers.current_user(session).username %><h1>
 
-    <% else %>
-    <% redirect 'error' %>
+    <a href="/logout">Log Out</a>
     <% end %>
-      <a href="/logout">Log Out</a>
+    
   </body>
 </html>
