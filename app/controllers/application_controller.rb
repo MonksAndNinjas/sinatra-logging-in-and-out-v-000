@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     if @current_user
       erb :account
     end
-      redirect '/error'
+    erb :account
   end
 
   get '/logout' do
