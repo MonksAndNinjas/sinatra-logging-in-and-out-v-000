@@ -25,9 +25,9 @@ class ApplicationController < Sinatra::Base
     @current_user = User.find_by(session[:user_id].to_s)
 
     if @current_user
-      erb :error
-    else
       erb :account
+    else
+      erb :error
     end
   end
 
